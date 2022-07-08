@@ -62,7 +62,7 @@ function buildTeam() {
 
 function addEmployee(response, title) {
     let employee;
-    let info = response.split(' ');
+    let info = response.split(',').map(i => i.trim());
     if (title === 'manager') {
         employee = new Manager(info[0], info[1], info[2], info[3]);
     } else if (title === 'intern') {
