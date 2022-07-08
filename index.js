@@ -9,7 +9,7 @@ const Engineer = employees.Engineer;
 const Intern = employees.Intern;
 // Packages needed for this application
 
-// let HTMLpage = ""
+// let HTMLpage = "'
 var teamRoster = [];
 
 // array of the prompts the user will see when running this program
