@@ -54,6 +54,8 @@ function buildTeam() {
                         buildTeam();
                     }
                     );
+            } else {
+                window.open("./index.html");
             };
         });
 }
@@ -95,6 +97,4 @@ function init() {
 }
 
 init();
-
-window.open("./index.html");
 module.exports = teamRoster;
