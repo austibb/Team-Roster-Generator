@@ -3,6 +3,7 @@ class Employee {
         this.name = name;
         this.id = id;
         this.email = email;
+        this.role = 'Employee';
     };
     name() {
         return this.name;
@@ -14,7 +15,7 @@ class Employee {
         return this.email;
     };
     role() {
-        return "Employee";
+        return this.role;
     };
 };
 
@@ -22,6 +23,7 @@ class Manager extends Employee {
     constructor(name, id, email, officeNo = 1) {
         super(name, id, email);
         this.officeNo = officeNo;
+        this.role = 'Manager';
     };
 
     officeNo() {
@@ -29,7 +31,7 @@ class Manager extends Employee {
     };
 
     role() {
-        return "Manager";
+        return this.role;
     };
 };
 
@@ -37,6 +39,7 @@ class Engineer extends Employee {
     constructor(name, id, email, github = austibb) {
         super(name, id, email);
         this.github = github;
+        this.role = 'Engineer';
     };
 
     github() {
@@ -44,7 +47,7 @@ class Engineer extends Employee {
     };
 
     role() {
-        return "Engineer";
+        return this.role;
     };
 };
 
@@ -52,6 +55,7 @@ class Intern extends Employee {
     constructor(name, id, email, school = 'preschool') {
         super(name, id, email);
         this.school = school;
+        this.role = 'Intern';
     };
 
     school() {
@@ -59,7 +63,7 @@ class Intern extends Employee {
     };
 
     role() {
-        return "Intern";
+        return this.role;
     };
 };
 

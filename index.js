@@ -1,5 +1,6 @@
 // packages and files needed for program to function
 const fs = require('fs');
+const open = require('open');
 const path = require('path');
 const inquirer = require('inquirer');
 
@@ -55,7 +56,8 @@ function buildTeam() {
                     }
                     );
             } else {
-                window.open("./index.html");
+                fs.writeFileSync('./data.json', JSON.stringify(teamRoster));
+                open("./index.html");
             };
         });
 }
@@ -97,4 +99,5 @@ function init() {
 }
 
 init();
-module.exports = teamRoster;
+
+exports.teamRoster = teamRoster;
